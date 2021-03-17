@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .colored-section {
-    background-color: #98acf8;
+    background-color: #865858;
     color: white;
 }
 
@@ -23,6 +23,13 @@ h2 {
     line-height: 1.5;
 }
 
+#title {
+    color: black;
+    background-image: url('/images/emerson-peters-oBCT3obZ6OY-unsplash.jpg');
+    background-size: cover;
+    background-position: center right;
+}
+
 /* Navigation bar */
 
 .navbar {
@@ -32,12 +39,25 @@ h2 {
 .navbar-dark .navbar-brand {
     font-weight: 700;
     font-size: 2.25rem;
+    color: black;
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: rgba(87, 50, 50, 0.5);
 }
 
 .navbar-dark .navbar-nav .nav-link {
     font-weight: 100;
     font-size: 1.1rem;
     padding: 0 18px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(0,0,0,0.8);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(87, 50, 50, 0.5);
 }
 
 /* Main content */
@@ -53,11 +73,13 @@ h2 {
     line-height: 1.5;
 }
 
-.download-btn {
-    margin: 5% 5% 5% 0;
+.download-btn img {
+    margin-right: 8px;
+    width: 148px;
+    height: 80px;
 }
 
-.col-lg-6 img {
+.col-lg-6 .phone {
     width: 60%;
     transform: rotate(25deg);
     position: absolute;
@@ -73,13 +95,16 @@ h2 {
     z-index: 1;
 }
 
-#features i {
-    color: #ef8172;
+#features svg {
     margin-bottom: 5%;
 }
 
-#features i:hover {
-    color: #98acf8;
+#features svg:hover {
+    stroke: #6e7c7c;
+}
+
+#features .diff:hover {
+    fill: #6e7c7c;
 }
 
 #features h3 {
@@ -91,17 +116,17 @@ h2 {
 
 #features p {
     color: #8f8f8f;
-    font-size: 0.75rem;
-    width: 55%;
+    font-size: 1rem;
+    width: 60%;
     margin: 0 auto;
 }
 
 /* testimonials */
 
 #testimonials h2 {
-    font-size: 2.75rem;
+    font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.5;
 }
 
@@ -112,15 +137,15 @@ h2 {
 }
 
 #tindogCarousel {
-    padding: 8% 14%;
+    padding: 6% 14%;
 }
 
 /* press */
 
 #press {
-    background-color: #98acf8;
+    background-color: white;
     text-align: center;
-    padding-bottom: 50px;
+    padding: 6% 0;
 }
 
 #press img {
@@ -131,7 +156,9 @@ h2 {
 /* Pricing */
 
 #pricing {
-    padding: 50px 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 6%;
 }
 
 .pricing-column {
@@ -149,7 +176,7 @@ h2 {
 }
 
 #cta h3 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.5;
 }
@@ -157,7 +184,9 @@ h2 {
 /* footer */
 
 #footer {
-    padding: 4% 8%;
+    padding: 1% 8%;
+    display: flex;
+    justify-content: space-between;
 }
 
 #footer i {
@@ -169,23 +198,45 @@ h2 {
     font-size: 12px;
 }
 
+.social-icon {
+    display: flex;
+}
+
+.social-icon i {
+    margin: 0 10px;
+}
+
 @media (max-width: 993px) {
+    .navbar-dark .navbar-toggler {
+        border-color: rgba(0,0,0,1);
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar-dark .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .container-fluid {
+        padding: 2% 7% 6%;
+    }
+
+    #title {
+        background-position: left;
+    }
+
     .col-lg-6 {
         text-align: center;
         padding-bottom: 50px;
     }
 
-    .col-lg-6 img {
-        transform: rotate(0);
-        position: static;
-    }
-
     .col-lg-6 h1 {
         font-size: 3rem;
+        color: black;
     }
 
     #testimonials h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
         line-height: 1.5;
     }
 
@@ -202,8 +253,19 @@ h2 {
         padding: 5% 2%;
     }
 
+    .card-body h2 {
+        font-size: 1.5rem;
+    }
+
     #cta h3 {
-        font-size: 2.75rem;
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        line-height: 1.5;
     }
     
 }
